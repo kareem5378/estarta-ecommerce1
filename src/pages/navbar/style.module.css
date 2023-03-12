@@ -1,0 +1,25 @@
+.navContainer {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  border-bottom: 2px solid red;
+  padding: 15px;
+}
+.logo {
+  font-size: 2rem;
+  color: black;
+}
+a {
+  all: unset;
+}
+.navButton {
+  background-color: lightcoral;
+  color: black;
+  border: 1px gray solid;
+  font-size: 1.6rem;
+  padding: 5px;
+}
+.navButton:hover {
+  background-color: tomato;
+  border: 1px red solid;
+}
