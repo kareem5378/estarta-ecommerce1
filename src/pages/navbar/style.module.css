@@ -13,13 +13,35 @@ a {
   all: unset;
 }
 .navButton {
-  background-color: lightcoral;
-  color: black;
+  background-color: black;
+  color: white;
   border: 1px gray solid;
   font-size: 1.6rem;
   padding: 5px;
+  border-radius: 5px;
 }
 .navButton:hover {
-  background-color: tomato;
-  border: 1px red solid;
+  background-color: #2f58cd;
+}
+.logoutContainer {
+  position: relative;
+}
+.logoutContent {
+  position: absolute;
+  font-size: 1.4rem;
+  right: 10px;
+  background-color: rgba(220, 220, 220, 0.8);
+  padding: 12px;
+  border-radius: 8px;
+  display: flex;
+  flex-direction: column;
+}
+.logoutButton {
+  font-size: 1.4rem;
+  color: white;
+  background-color: black;
+  padding: 5px;
+}
+.logoutButton:hover {
+  background-color: red;
 }

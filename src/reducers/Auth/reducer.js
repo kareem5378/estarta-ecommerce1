@@ -1,10 +1,11 @@
 import * as consts from "./constants";
 
 const initialState = {
+  token: null,
   loading: false,
   error: null,
-  isAuth: localStorage.getItem("token") ? true : false,
-  user: localStorage.getItem("user"),
+  isAuth: !!localStorage.getItem("token") || false,
+  user: JSON.parse(localStorage.getItem("user")) || {},
 };
 
 export default function Auth(state = initialState, action) {
@@ -19,10 +20,24 @@ export default function Auth(state = initialState, action) {
         ...state,
         loading: false,
         isAuth: true,
-        user: action.payload.userMetaData,
+        user: action.payload.userData,
+        token: action.payload.token,
       };
     case consts.AUTH_FAILED:
       return { ...state, loading: false, error: action.payload };
+    case consts.CLEAR:
+      return {
+        token: "",
+        isAuth: false,
+        user: {},
+        loading: false,
+        error: null,
+      };
+    case consts.RESET:
+      return {
+        ...state,
+        loading: false,
+      };
     default:
       return {
         ...state,

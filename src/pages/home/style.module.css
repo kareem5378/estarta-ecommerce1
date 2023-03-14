@@ -11,14 +11,3 @@
 .description {
   font-size: 1.5rem;
 }
-.homeButton {
-  background-color: lightcoral;
-  color: black;
-  border: 1px gray solid;
-  font-size: 1.6rem;
-  padding: 5px;
-}
-.homeButton:hover {
-  background-color: tomato;
-  border: 1px red solid;
-}

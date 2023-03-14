@@ -18,7 +18,9 @@ export default function LoginPage() {
   };
 
   useEffect(() => {
-    if (isAuth) navigate("/");
+    if (isAuth) {
+      navigate("/products");
+    }
   }, [isAuth]);
 
   return (

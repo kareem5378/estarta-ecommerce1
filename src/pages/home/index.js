@@ -1,6 +1,5 @@
 import React from "react";
 import styles from "./style.module.css";
-import { Link } from "react-router-dom";
 
 export default function Home() {
   return (
@@ -8,10 +7,7 @@ export default function Home() {
       <div className={styles.welcomeHeader}>
         Welcome to Estarta's Ecommerce-3
       </div>
-      <p className={styles.description}>Click the button to login</p>
-      <Link to={"/loginpage"} className={styles.homeButton}>
-        Login!
-      </Link>
+      <p className={styles.description}>Login to start shopping!</p>
     </div>
   );
 }
