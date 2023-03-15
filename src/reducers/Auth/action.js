@@ -47,7 +47,7 @@ export const Logout = () => async (dispatch) => {
 
 //Check if token is valid
 
-export const checkValidation = async (dispatch) => {
+export const checkValidation = () => async (dispatch) => {
   dispatch({
     type: consts.AUTH_LOADING,
   });
