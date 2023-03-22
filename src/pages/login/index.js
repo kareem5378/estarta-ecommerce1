@@ -24,16 +24,26 @@ export default function LoginPage() {
   }, [isAuth]);
 
   return (
-    <div className={style.container}>
-      <input
-        type={"email"}
-        onChange={(e) => setEmail(e.target.value)}
-        placeholder={"Email..."}
-        className={style.input}
-      />
-      <button disabled={loading} onClick={handelLogin} className={style.button}>
-        {loading ? "Loading..." : "Login"}
-      </button>
-    </div>
+    <>
+      {isAuth ? (
+        <>{navigate("/products")}</>
+      ) : (
+        <div className={style.container}>
+          <input
+            type={"email"}
+            onChange={(e) => setEmail(e.target.value)}
+            placeholder={"Email..."}
+            className={style.input}
+          />
+          <button
+            disabled={loading}
+            onClick={handelLogin}
+            className={style.button}
+          >
+            {loading ? "Loading..." : "Login"}
+          </button>
+        </div>
+      )}
+    </>
   );
 }

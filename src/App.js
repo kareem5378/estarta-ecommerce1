@@ -14,7 +14,8 @@ import Spinner from "./pages/spinner";
 const Home = lazy(() => import("./pages/home"));
 const Login = lazy(() => import("./pages/login"));
 const NotFound = lazy(() => import("./pages/notFound"));
-const Products = lazy(() => import("./pages/products"));
+const Cart = lazy(() => import("./pages/cart"));
+const ProductsContent = lazy(() => import("./pages/products"));
 
 function App() {
   const { isAuth, loading } = useSelector((state) => state.Auth);
@@ -38,7 +39,11 @@ function App() {
           <Route path="/login" element={<Login />} />
           <Route
             path="/products"
-            element={<ProtectedRoutes component={<Products />} />}
+            element={<ProtectedRoutes component={<ProductsContent />} />}
+          />
+          <Route
+            path="/cart"
+            element={<ProtectedRoutes component={<Cart />} />}
           />
           <Route path="*" element={<NotFound />} />
         </Routes>

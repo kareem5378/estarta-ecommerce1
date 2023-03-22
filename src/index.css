@@ -1,0 +1,7 @@
+.navlink {
+  font-size: 1.4rem;
+}
+
+Navlink:active {
+  border: 10px blue solid;
+}

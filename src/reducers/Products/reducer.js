@@ -1,25 +1,25 @@
-import * as consts from "./constants";
+import * as constants from "./constants";
 
 const initialState = {
-  products: [],
-  loading: false,
+  product: [],
   error: null,
+  loading: false,
 };
 
 export default function Products(state = initialState, action) {
   switch (action.type) {
-    case consts.PRODUCT_LOADING:
+    case constants.PRODUCT_LOADING:
       return {
         ...state,
         loading: true,
       };
-    case consts.PRODUCT_SUCCESS:
+    case constants.PRODUCT_SUCCESS:
       return {
         ...state,
         loading: false,
-        products: action.payload,
+        product: action.payload,
       };
-    case consts.PRODUCT_FAILED:
+    case constants.PRODUCT_FAILED:
       return {
         ...state,
         loading: false,

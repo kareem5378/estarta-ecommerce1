@@ -1,4 +1,4 @@
-import * as consts from "./constants";
+import * as constants from "./constants";
 
 const initialState = {
   token: null,
@@ -10,12 +10,12 @@ const initialState = {
 
 export default function Auth(state = initialState, action) {
   switch (action.type) {
-    case consts.AUTH_LOADING:
+    case constants.AUTH_LOADING:
       return {
         ...state,
         loading: true,
       };
-    case consts.AUTH_SUCCESS:
+    case constants.AUTH_SUCCESS:
       return {
         ...state,
         loading: false,
@@ -23,9 +23,9 @@ export default function Auth(state = initialState, action) {
         user: action.payload.userData,
         token: action.payload.token,
       };
-    case consts.AUTH_FAILED:
+    case constants.AUTH_FAILED:
       return { ...state, loading: false, error: action.payload };
-    case consts.CLEAR:
+    case constants.CLEAR:
       return {
         token: "",
         isAuth: false,
@@ -33,7 +33,7 @@ export default function Auth(state = initialState, action) {
         loading: false,
         error: null,
       };
-    case consts.RESET:
+    case constants.RESET:
       return {
         ...state,
         loading: false,

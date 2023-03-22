@@ -8,6 +8,7 @@
 .logo {
   font-size: 2rem;
   color: black;
+  cursor: pointer;
 }
 a {
   all: unset;
@@ -19,12 +20,19 @@ a {
   font-size: 1.6rem;
   padding: 5px;
   border-radius: 5px;
+  cursor: pointer;
 }
 .navButton:hover {
   background-color: #2f58cd;
 }
 .logoutContainer {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 10px;
   position: relative;
+  padding: 0 15px;
+  cursor: pointer;
 }
 .logoutContent {
   position: absolute;
@@ -35,12 +43,14 @@ a {
   border-radius: 8px;
   display: flex;
   flex-direction: column;
+  top: 40px;
 }
 .logoutButton {
   font-size: 1.4rem;
   color: white;
   background-color: black;
   padding: 5px;
+  cursor: pointer;
 }
 .logoutButton:hover {
   background-color: red;
