@@ -20,11 +20,7 @@ const allReducers = combineReducers({
   HandleCart,
 });
 const persistedReducer = persistReducer(persistConfig, allReducers);
-const store = createStore(
-  persistedReducer,
-  {},
-  applyMiddleware(thunk)
-);
+const store = createStore(persistedReducer, {}, applyMiddleware(thunk));
 
 const persistor = persistStore(store);
 
